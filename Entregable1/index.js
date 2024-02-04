@@ -1,4 +1,4 @@
-// CURSO: Backend
+// Curso: Programación Backend
 // Comisión: 53110
 // Desafío: Entregable 1
 // Alumno: Lucas Gallo
