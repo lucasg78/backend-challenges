@@ -1,4 +1,6 @@
-// DESAFÍO ENTREGABLE 1
+// CURSO: Backend
+// Comisión: 53110
+// Desafío: Entregable 1
 // Alumno: Lucas Gallo
 // Fecha: 04/02/2024
 
