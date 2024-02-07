@@ -79,10 +79,10 @@ class ProductManager {
 
     deleteProduct(id) {
         const products = this.getProducts();
-        // Check if the product with the given id exists
+        // Chequear si el producto con el id indicado existe
         const productIndex = products.findIndex(product => product.id === id);
         if (productIndex !== -1) {
-            // Product found, proceed with deletion
+            // Producto encontrado, se procede a eliminarlo
             const newList = products.filter(product => product.id !== id);
             fs.writeFileSync(this.path, JSON.stringify(newList, null, 4));
             console.log(`Producto con id=${id} eliminado`);

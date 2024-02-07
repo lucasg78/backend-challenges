@@ -69,7 +69,7 @@ console.log('Prueba de agregar 1 producto:');
 productManager.addProduct('Producto de prueba 1', 'Este es un producto de prueba', 500, 'Sin imagen', '001', 100);
 console.log(productManager.getProducts());
 
-// 3. Prueba de producto con datos faltantes
+// 3. Prueba de agregar un producto con datos faltantes
 console.log('---------------------------------------------------------');
 console.log('Prueba de agregar 1 producto con datos faltantes:');
 productManager.addProduct('Producto de prueba 2', 'Este es otro producto de prueba', 2000, 'Sin imagen', '002')
@@ -82,7 +82,7 @@ productManager.addProduct('Producto de prueba 3', 'Este es otro producto de prue
 productManager.addProduct('Producto de prueba 4', 'Este es otro producto de prueba', 3000, 'Sin imagen', '004', 100)
 console.log(productManager.getProducts());
 
-// 5. Prueba con producto repetido
+// 5. Prueba de agregar un producto repetido
 console.log('---------------------------------------------------------');
 console.log('Prueba de producto repetido:');
 productManager.addProduct('Producto de prueba 4', 'Este es otro producto de prueba', 3000, 'Sin imagen', '004', 100)
@@ -95,3 +95,7 @@ console.log('---------------------------------------------------------');
 console.log('Prueba de producto no encontrado:');
 console.log(productManager.getProductById(1000)) // no existe (undefined)
 console.log('---------------------------------------------------------');
+
+///--- Agregado el 07/02/2024 ---
+// 7. Transformo todos los productos de un conjunto de objetos a un array
+console.log(JSON.stringify(productManager.getProducts(),null, 1))
