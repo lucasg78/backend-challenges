@@ -102,37 +102,37 @@ console.log('---------------------------------------------------------');
 console.log('Prueba de array vacío:');
 console.log(productManager.getProducts());
 
-// 2. Prueba de agregar un producto 
+// 3. Prueba de agregar un producto 
 console.log('---------------------------------------------------------');
 console.log('Prueba de agregar 1 producto:');
 productManager.addProduct('producto prueba', 'Este es un producto prueba', 200, 'Sin imagen', 'abc123', 25);
 console.log(productManager.getProducts()); // Debe aparecer el producto recién agregado
 
-// 3. Prueba de buscar un producto por id
+// 4. Prueba de buscar un producto por id
 console.log('---------------------------------------------------------');
 console.log('Prueba de producto encontrado por id=1:');
-console.log(productManager.getProductById(1)) // existe
+console.log(productManager.getProductById(1)) // Existe
 console.log('---------------------------------------------------------');
 console.log('Prueba de producto con id=2 no encontrado:');
-console.log(productManager.getProductById(2)) // no existe (undefined)
+console.log(productManager.getProductById(2)) // No existe (undefined)
 
-// 4 . Prueba de modificar el campo de un producto
+// 5. Prueba de modificar el campo de un producto
 console.log('---------------------------------------------------------');
 console.log('Prueba de modificar el producto con id=1:');
-console.log(productManager.updateProduct(1, { price: 250 })) // no se elimnó el id y se modificó el campo price
+console.log(productManager.updateProduct(1, { price: 250 })) // No se eliminó el id y se modificó el campo price
 console.log(productManager.getProducts()); // Debe aparecer el producto recién agregado
 
-// 5. Prueba de eliminar un producto
+// 6. Prueba de eliminar un producto
 console.log('---------------------------------------------------------');
 console.log('Prueba de agregar otro producto:');
 productManager.addProduct('producto prueba2', 'Este es otro producto prueba', 300, 'Sin imagen', 'abc124', 25);
 console.log(productManager.getProducts()); // Debe aparecer el producto recién agregado
 console.log('---------------------------------------------------------');
 console.log('Prueba de eliminar producto con id=1:');
-console.log(productManager.deleteProduct(1)) // se eliminó  
+console.log(productManager.deleteProduct(1)) // Se eliminó  
 console.log('---------------------------------------------------------');
 console.log(productManager.getProducts()); // Debe aparecer el array sin el producto eliminado
 console.log('---------------------------------------------------------');
 console.log('Prueba de producto no encontrado:');
-console.log(productManager.deleteProduct(3)) // no se eliminó (no existe)
+console.log(productManager.deleteProduct(3)) // No se eliminó (no existe)
 console.log('---------------------------------------------------------');
