@@ -4,7 +4,6 @@
 // Alumno: Lucas Gallo
 // Fecha: 07/02/2024
 
-
 const fs = require('fs')
 
 class ProductManager {
