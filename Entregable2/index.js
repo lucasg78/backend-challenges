@@ -86,7 +86,7 @@ class ProductManager {
             fs.writeFileSync(this.path, JSON.stringify(newList, null, 4));
             console.log(`Producto con id=${id} eliminado`);
         } else {
-            console.error(`ERROR: producto con id ${id} no encontrado. No se ha eliminado.`);
+            console.error(`ERROR: producto con id=${id} no encontrado. No se ha eliminado.`);
         }
     }
 }
@@ -94,7 +94,7 @@ class ProductManager {
 // Testing
 
 // 1. Creación de la instancia de la clase "ProductManager"
-const productManager = new ProductManager('./files/products.json');
+const productManager = new ProductManager('./files/products.json'); // Se pasa el path por parámetro
 
 // 2. Prueba de array vacío
 console.log('---------------------------------------------------------');
