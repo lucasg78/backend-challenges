@@ -76,11 +76,26 @@ class ProductManager {
         }
     }
 
+    // deleteProduct - OPCIÓN 1
+    /*     deleteProduct(id) {
+            const products = this.getProducts();
+            // Chequear si el producto con el id indicado existe
+            const productIndex = products.findIndex(product => product.id === id);
+            if (productIndex !== -1) {
+                // Producto encontrado, se procede a eliminarlo
+                const newList = products.filter(product => product.id !== id);
+                fs.writeFileSync(this.path, JSON.stringify(newList, null, 4));
+                console.log(`Producto con id=${id} eliminado`);
+            } else {
+                console.error(`ERROR: producto con id=${id} no encontrado. No se ha eliminado.`);
+            }
+        } */
+
+    // deleteProduct - OPCIÓN 2
     deleteProduct(id) {
         const products = this.getProducts();
         // Chequear si el producto con el id indicado existe
-        const productIndex = products.findIndex(product => product.id === id);
-        if (productIndex !== -1) {
+        if (products.some(product => product.id === id)) {
             // Producto encontrado, se procede a eliminarlo
             const newList = products.filter(product => product.id !== id);
             fs.writeFileSync(this.path, JSON.stringify(newList, null, 4));
@@ -89,7 +104,20 @@ class ProductManager {
             console.error(`ERROR: producto con id=${id} no encontrado. No se ha eliminado.`);
         }
     }
+
+    eraseFile() {
+        setTimeout(() => {
+            if (fs.existsSync(this.path)) {
+                fs.unlinkSync(this.path)
+                console.log("Archivo eliminado...!!!");
+            } else {
+                console.log("No existe el archivo");
+            }
+        }, 5000);
+    }
 }
+
+
 
 // Testing
 
@@ -135,3 +163,7 @@ console.log('---------------------------------------------------------');
 console.log('Prueba de producto no encontrado:');
 console.log(productManager.deleteProduct(3)) // No se eliminó (no existe)
 console.log('---------------------------------------------------------');
+
+// 7. Prueba de eliminar el archivo
+console.log('Prueba eliminar el archivo:');
+console.log(productManager.eraseFile()) // Se eliminó el archivo
