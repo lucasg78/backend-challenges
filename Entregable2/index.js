@@ -105,7 +105,7 @@ class ProductManager {
         }
     }
 
-    eraseFile() {
+    deleteFile() {
         setTimeout(() => {
             if (fs.existsSync(this.path)) {
                 fs.unlinkSync(this.path)
@@ -165,5 +165,5 @@ console.log(productManager.deleteProduct(3)) // No se eliminó (no existe)
 console.log('---------------------------------------------------------');
 
 // 7. Prueba de eliminar el archivo
-console.log('Prueba eliminar el archivo:');
-console.log(productManager.eraseFile()) // Se eliminó el archivo
+console.log('Prueba de eliminar el archivo:');
+console.log(productManager.deleteFile()) // Se eliminó el archivo
