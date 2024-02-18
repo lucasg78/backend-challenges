@@ -37,7 +37,7 @@ This server is developed using Node.js and Express to manage a list of products.
 - **Method:** GET
 - **Example:** `http://localhost:8080/`
 
-### 2. All Products and Products by Param Length Limit
+### 2. Get all Products and Products by Param Length Limit
 
 - **Endpoint:** `/products`
 - **Description:** Retrieves a list of products and optionally limits the response based on the "limit" query parameter.
@@ -46,7 +46,7 @@ This server is developed using Node.js and Express to manage a list of products.
 - **Example:**
 
   - `http://localhost:8080/products/` (Get all products)
-  - `http://localhost:8080/products/?limit=3` (Get the first 3 products)
+  - `http://localhost:8080/products/?limit=5` (Get the first 5 products)
 
 ### 3. Get Product by ID
 
@@ -54,7 +54,11 @@ This server is developed using Node.js and Express to manage a list of products.
 - **Description:** Retrieves a specific product by its ID.
 - **Method:** GET
 - **Parameter:** `id` (Product ID)
-- **Example:** `http://localhost:8080/products/1` (Get product with ID 1)
+- **Example:**
+
+  - `http://localhost:8080/products/2` (Get product with ID 2)
+  - `http://localhost:8080/products/34123123` (Example with non-existing ID)
+  - If you attempt to retrieve a product with an ID that does not exist, the server will return an error object indicating that the product does not exist.
 
 ### Error Handling
 
