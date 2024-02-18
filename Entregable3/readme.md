@@ -1,4 +1,6 @@
-# Product Management Server
+# Backend Programming Course
+
+## Deliverable challenge: Server with Express
 
 This server is developed using Node.js and Express to manage a list of products. The server provides various endpoints to retrieve information about products, add new products, update existing products, and delete products.
 
