@@ -58,7 +58,7 @@ This server is developed using Node.js and Express to manage a list of products.
 
   - `http://localhost:8080/products/2` (Get product with ID 2)
   - `http://localhost:8080/products/34123123` (Example with non-existing ID)
-  - If you attempt to retrieve a product with an ID that does not exist, the server will return an error object indicating that the product does not exist.
+    - If you attempt to retrieve a product with an ID that does not exist, the server will return an error object indicating that the product does not exist.
 
 ### Error Handling
 
