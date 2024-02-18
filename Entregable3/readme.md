@@ -54,7 +54,7 @@ This server is developed using Node.js and Express to manage a list of products.
 - **Description:** Retrieves a specific product by its ID.
 - **Method:** GET
 - **Parameter:** `id` (Product ID)
-- **Example:**
+- **Examples:**
 
   - `http://localhost:8080/products/2` (Get product with ID 2)
   - `http://localhost:8080/products/34123123` (Example with non-existing ID)

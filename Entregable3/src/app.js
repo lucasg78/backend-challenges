@@ -11,19 +11,16 @@ const products = new ProductManager('./files/products.json');
 // The root endpoint ("/") sends a welcome message
 
 app.get("/", (req, res) => {
-    res.send(`<h1>Welcome</h1>`);
+    res.send(`<h1 style="color: blue">Welcome</h1>`);
 })
 
-// 2. All products and products by param length limit for get
+// 2. Get all products and products by param length limit
 // The "/products" endpoint retrieves a list of products and optionally limits the response based on the "limit" query parameter
 
 app.get("/products", async (req, res) => {
     try {
         let limit = req.query.limit;
         let productList = limit ? (await products.getProducts()).slice(0, limit) : await products.getProducts();
-        // http://localhost:3333/products/?limit=3
-        // Returns: 
-        //
         res.json({ products: productList });
     } catch (error) {
         res.status(500).json({ error: error.message });
